@@ -1,4 +1,6 @@
 # SeleniumTesting
+Get java and eclipse
+export this project
 Required jars are in the libs folder
 Done with java 10.0.1
 Install mutillidae 2 docker image 
