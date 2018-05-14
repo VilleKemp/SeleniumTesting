@@ -23,15 +23,17 @@ public class basictest {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  private String TEST_ENVIRONMENT = "172.17.0.2/collab/";
-  private String COLLAB_PASSWORD= "eDyNdBOyuyTJJ83brX9BRSgqwW+xKX96f1+ouHUuP+0=";
+  private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
   private int LOOPS = 20;
+  private String[] command = {"sh", "-c" ,"echo 'fuziafsfakjfb' | radamsa"};
   public void login(String uname, String pwd){
 	  String URL = "https://" + uname + ":" + pwd + "@" + TEST_ENVIRONMENT;
 	  driver.get(URL);
 	}
   
   private static String executeCommandLine(String[] cmdLine) {
+	  //give the command in the followin form
+	//String[] command = {"sh", "-c" ,"echo 'fuziafsfakjfb' | radamsa"};
       String output = "";
       try {
           Process p = Runtime.getRuntime().exec(cmdLine);
@@ -56,15 +58,15 @@ public class basictest {
 
   @Test
   public void testBasicTestCase() throws Exception {
-	  login("collab",COLLAB_PASSWORD);
-	  	String[] command = {"sh", "-c" ,"echo 'fuziafsfakjfb' | radamsa"};
-	  
-	    String output = executeCommandLine(command);
-	    System.out.printf(output);
-	    driver.findElement(By.name("value")).click();
-	    driver.findElement(By.name("value")).clear();
-	    driver.findElement(By.name("value")).sendKeys(output);
-	    driver.findElement(By.name("value")).sendKeys(Keys.ENTER);
+	  driver.get("http://localhost/mutillidae/index.php?page=user-info.php");
+	    driver.findElement(By.name("username")).click();
+	    driver.findElement(By.name("username")).clear();
+	    driver.findElement(By.name("username")).sendKeys(executeCommandLine(command));
+	    driver.findElement(By.name("password")).click();
+	    driver.findElement(By.name("password")).clear();
+	    driver.findElement(By.name("password")).sendKeys(executeCommandLine(command));
+	    driver.findElement(By.name("user-info-php-submit-button")).click();
+	    
 	    
   }
   
