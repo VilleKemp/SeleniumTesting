@@ -24,15 +24,17 @@ public class basictest {
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
-  private int LOOPS = 20;
-  private String[] command = {"sh", "-c" ,"echo 'fuziafsfakjfb' | radamsa"};
+  private int LOOPS = 4;
+  private String FUZZ_STRING = "fuzzthisstring.com";
+  
+  //use if site requires a popup login
   public void login(String uname, String pwd){
 	  String URL = "https://" + uname + ":" + pwd + "@" + TEST_ENVIRONMENT;
 	  driver.get(URL);
 	}
-  
+  //execute commandline commands
   private static String executeCommandLine(String[] cmdLine) {
-	  //give the command in the followin form
+	  //give the command in the following form
 	//String[] command = {"sh", "-c" ,"echo 'fuziafsfakjfb' | radamsa"};
       String output = "";
       try {
@@ -48,6 +50,15 @@ public class basictest {
       }
       return output;
 } 
+  //fuzz a string with radamsa
+  private String fuzzWithRadamsa(String notfuzz) {
+	  
+	  String[] radamsaCommand = {"sh", "-c" ,"echo '"+ notfuzz + "'|radamsa"};
+	  String fuzzed = executeCommandLine(radamsaCommand);
+	  System.out.println("Radamsa fuzzed "+notfuzz+" into "+fuzzed);
+	  
+	  return fuzzed;
+  }
   
   @Before
   public void setUp() throws Exception {
@@ -57,23 +68,26 @@ public class basictest {
   }
 
   @Test
-  public void testBasicTestCase() throws Exception {
+  public void testLogIn() throws Exception {
 	  driver.get("http://localhost/mutillidae/index.php?page=user-info.php");
 	    driver.findElement(By.name("username")).click();
 	    driver.findElement(By.name("username")).clear();
-	    driver.findElement(By.name("username")).sendKeys(executeCommandLine(command));
+	    driver.findElement(By.name("username")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
 	    driver.findElement(By.name("password")).click();
 	    driver.findElement(By.name("password")).clear();
-	    driver.findElement(By.name("password")).sendKeys(executeCommandLine(command));
-	    driver.findElement(By.name("user-info-php-submit-button")).click();
-	    
-	    
+	    driver.findElement(By.name("password")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.name("user-info-php-submit-button")).click();	    
+  }
+  
+  @Test
+  public void testREST() throws Exception{
+	  //"http://localhost/mutillidae/webservices/rest/ws-user-account.php"
   }
   
   @Test
   public void testLooping() throws Exception{
 	for(int i=1;i<LOOPS;i++) {
-	  testBasicTestCase(); 
+	  testLogIn(); 
 	  } 
 	  
   }
