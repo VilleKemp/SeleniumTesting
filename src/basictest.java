@@ -85,6 +85,7 @@ public class basictest {
   }
   
   @Test
+  //loops a test several times
   public void testLooping() throws Exception{
 	for(int i=1;i<LOOPS;i++) {
 	  testLogIn(); 
