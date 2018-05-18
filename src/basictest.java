@@ -15,8 +15,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.Proxy;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class basictest {
   private WebDriver driver;
@@ -26,6 +31,10 @@ public class basictest {
   private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
   private int LOOPS = 4;
   private String FUZZ_STRING = "fuzzthisstring.com";
+  
+  private Boolean proxyInUse = false;
+  private String proxyAddress = "localhost";
+  private int proxyPort = 8081;
   
   //use if site requires a popup login
   public void login(String uname, String pwd){
@@ -62,7 +71,17 @@ public class basictest {
   
   @Before
   public void setUp() throws Exception {
-    driver = new FirefoxDriver();
+	DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+    FirefoxOptions options = new FirefoxOptions(capabilities);
+    
+    if(proxyInUse) {
+	    options.addPreference("network.proxy.type", 1);
+	    options.addPreference("network.proxy.http", proxyAddress);     
+	    options.addPreference("network.proxy.http_port", proxyPort); 
+	    options.addPreference("network.proxy.no_proxies_on", "");
+    }
+    driver = new FirefoxDriver(options);
+
     baseUrl = "https://www.katalon.com/";
     driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
