@@ -1,6 +1,6 @@
 # SeleniumTesting
 Setup:
-
+:shipit:
 Get java and eclipse  
 export this project  
 Required jars are in the libs folder  
