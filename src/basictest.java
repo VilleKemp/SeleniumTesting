@@ -1,6 +1,7 @@
 
 import static org.junit.Assert.fail;
 
+
 import java.io.BufferedReader;
 import java.io.Console;
 import java.io.IOException;
@@ -23,18 +24,52 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import org.json.JSONObject;
+
 public class basictest {
   private WebDriver driver;
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
   private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
+  private String PROXY_URL = "http://localhost:8080/proxy/8081/har";
   private int LOOPS = 4;
   private String FUZZ_STRING = "fuzzthisstring.com";
   
-  private Boolean proxyInUse = false;
+  private Boolean proxyInUse = true;
   private String proxyAddress = "localhost";
   private int proxyPort = 8081;
+  
+  public JSONObject getHar() throws Exception {
+		String url = PROXY_URL;
+	        URL obj = new URL(url);
+	        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
+	        // optional default is GET
+	        con.setRequestMethod("GET");
+	        //add request header
+	        con.setRequestProperty("User-Agent", "Mozilla/5.0");
+	        int responseCode = con.getResponseCode();
+	        System.out.println("\nSending 'GET' request to URL : " + url);
+	        System.out.println("Response Code : " + responseCode);
+	        BufferedReader in = new BufferedReader(
+	                new InputStreamReader(con.getInputStream()));
+	        String inputLine;
+	        StringBuffer response = new StringBuffer();
+	        while ((inputLine = in.readLine()) != null) {
+	        	response.append(inputLine);
+	        }
+	        in.close();
+	        
+	        //Read JSON response and print
+	        JSONObject myResponse = new JSONObject(response.toString());
+	        return myResponse; 
+		    }
+//  JSONObject ob = getHar();
+//  System.out.print(ob.getJSONObject("log").getString("version")); 
   
   //use if site requires a popup login
   public void login(String uname, String pwd){
@@ -87,6 +122,7 @@ public class basictest {
   }
 
   @Test
+  //Fuzz both login fields
   public void testLogIn() throws Exception {
 	  driver.get("http://localhost/mutillidae/index.php?page=user-info.php");
 	    driver.findElement(By.name("username")).click();
@@ -99,15 +135,21 @@ public class basictest {
   }
   
   @Test
-  public void testREST() throws Exception{
-	  //"http://localhost/mutillidae/webservices/rest/ws-user-account.php"
+  //fuzz url to find hidden directories
+  public void testDirectoryBrowsing() throws Exception{
+	  
+	  driver.get("http://localhost/mutillidae/"+ fuzzWithRadamsa("index"));
+	
+	  
   }
+  
+  
   
   @Test
   //loops a test several times
   public void testLooping() throws Exception{
 	for(int i=1;i<LOOPS;i++) {
-	  testLogIn(); 
+	  //testDirectoryBrowsing();
 	  } 
 	  
   }
