@@ -29,6 +29,12 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import org.json.JSONObject;
+//rest-assured imports
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+
 
 public class basictest {
   private WebDriver driver;
@@ -37,6 +43,7 @@ public class basictest {
   private StringBuffer verificationErrors = new StringBuffer();
   private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
   private String PROXY_URL = "http://localhost:8080/proxy/8081/har";
+  private String REST_URL = "http://localhost:80/mutillidae/webservices/rest/ws-user-account.php?username=";
   private int LOOPS = 4;
   private String FUZZ_STRING = "fuzzthisstring.com";
   
@@ -44,7 +51,7 @@ public class basictest {
   private String proxyAddress = "localhost";
   private int proxyPort = 8081;
   
-  public JSONObject getHar() throws Exception {
+  private JSONObject getHar() throws Exception {
 		String url = PROXY_URL;
 	        URL obj = new URL(url);
 	        HttpURLConnection con = (HttpURLConnection) obj.openConnection();
@@ -142,11 +149,19 @@ public class basictest {
 	
 	  
   }
-  
-  
+  @Test
+  public void testREST() throws Exception{
+	  
+	    when().
+	    get(REST_URL).
+	    then().statusCode(200);
+	 
+	  
+  }
+
   
   @Test
-  //loops a test several times
+  //loop
   public void testLooping() throws Exception{
 	for(int i=1;i<LOOPS;i++) {
 	  //testDirectoryBrowsing();
