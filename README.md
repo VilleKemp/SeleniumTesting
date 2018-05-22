@@ -1,13 +1,12 @@
 # SeleniumTesting
-Setup:
-:shipit:
+Setup:  
 Get java and eclipse  
 export this project  
 Required jars are in the libs folder  
 
-Done with java 10.0.1
+Done with java 10.0.1  
 
-Install mutillidae 2 docker image
+Install mutillidae 2 docker image  
 ```
 docker pull bltsec/mutillidae-docker 
 ```
@@ -17,11 +16,15 @@ docker run -d -p 80:80 -p 443:443 --name owasp17 bltsec/mutillidae-docker
 ```
 firefox http://localhost:80/mutillidae
 ```
-
 * remake the database  
 Start testing!  
-
-
+  
+REST testing  
+Note this API is kinda barebones and missing features. It requires python2 and atleas packages flask and flask-restful
+'''
+git clone https://github.com/VilleKemp/ExerciseTracker.git && cd ExerciseTracker && git checkout WIP
+'''
+Follow the README in branch WIP of the ExerciseTracker
 # Using browsermob
 Download and run browsermob-proxy binary  
 * https://github.com/lightbody/browsermob-proxy/releases  
