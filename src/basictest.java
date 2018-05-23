@@ -174,18 +174,22 @@ public class basictest {
   @Test
   //Test for ExerciseTracker
   public void testEtracker() throws Exception {
-    driver.get("http://localhost:5000/forum/admin/ui.html");
-    driver.findElement(By.id("showAllUsersButton")).click();
-    driver.findElement(By.linkText("Mystery")).click();
-    driver.findElement(By.name("newFriend_text")).click();
-    driver.findElement(By.name("newFriend_text")).clear();
-    driver.findElement(By.name("newFriend_text")).sendKeys("");
-    driver.findElement(By.name("newFriend_text")).click();
-    driver.findElement(By.name("newFriend_text")).clear();
-    driver.findElement(By.name("newFriend_text")).sendKeys("M");
-    driver.findElement(By.id("friend_button_container")).click();
-    driver.findElement(By.id("add_friend_href")).click();
-    assertEquals("Friend successfully added", closeAlertAndGetItsText());
+	  driver.get("http://localhost:5000/forum/admin/ui.html");
+	    driver.findElement(By.id("addUserButton")).click();
+	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).click();
+	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).clear();
+	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.id("password")).clear();
+	    driver.findElement(By.id("password")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).click();
+	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).clear();
+	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.xpath("(//input[@id='avatar'])[2]")).clear();
+	    driver.findElement(By.xpath("(//input[@id='avatar'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.xpath("(//input[@id='visibility'])[2]")).clear();
+	    driver.findElement(By.xpath("(//input[@id='visibility'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.id("createUser")).click();
+	    assertEquals("User successfully added", closeAlertAndGetItsText());;
   }
  
   
