@@ -23,6 +23,7 @@ REST testing
 Note this API is kinda barebones and missing features. It requires python2 and atleas packages flask and flask-restful
 ```
 git clone https://github.com/VilleKemp/ExerciseTracker.git && cd ExerciseTracker && git checkout WIP
+python forum.py
 ```
 Follow the README in branch WIP of the ExerciseTracker
 # Using browsermob
