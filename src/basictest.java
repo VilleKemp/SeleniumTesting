@@ -43,9 +43,9 @@ public class basictest {
   private String baseUrl;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
-  private String TEST_ENVIRONMENT = "http://localhost:80/mutillidae";
+  private String TEST_ENVIRONMENT = "http://localhost:81/mutillidae";
   private String PROXY_URL = "http://localhost:8080/proxy/8081/har";
-  private String REST_URL = "http://localhost:80/mutillidae/webservices/rest/ws-user-account.php?username=";
+  private String REST_URL = "http://localhost:81/mutillidae/webservices/rest/ws-user-account.php?username=";
   private String REST_URL2 = "http://localhost:5000/exercisetracker/api/";
   private int LOOPS = 4;
   private String FUZZ_STRING = "fuzzthisstring.com";
@@ -135,7 +135,7 @@ public class basictest {
   @Test
   //Fuzz both login fields
   public void testLogIn() throws Exception {
-	  driver.get("http://localhost/mutillidae/index.php?page=user-info.php");
+	  driver.get(TEST_ENVIRONMENT+"/index.php?page=user-info.php");
 	    driver.findElement(By.name("username")).click();
 	    driver.findElement(By.name("username")).clear();
 	    driver.findElement(By.name("username")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
@@ -152,7 +152,7 @@ public class basictest {
   //fuzz url to find hidden directories
   public void testDirectoryBrowsing() throws Exception{
 	  String fuzzdata = fuzzWithRadamsa("index");
-	  driver.get("http://localhost/mutillidae/"+ fuzzdata);
+	  driver.get(TEST_ENVIRONMENT+'/'+ fuzzdata);
 	  WebElement header1 = driver.findElement(By.tagName("h1"));
 	  String elementval = header1.getText();
 	  //check if the element h1 has the string that indicates that you can browse directories
