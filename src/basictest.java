@@ -160,6 +160,22 @@ public class basictest {
 	  
   }
  
+  public void testPetstorePostUpdate() throws Exception {
+	    driver.get("http://localhost:8080/");
+	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div/div")).click();
+	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div/div/div[2]/button")).click();
+	    driver.findElement(By.xpath("//input[@value='']")).click();
+	    driver.findElement(By.xpath("//input[@value='235']")).clear();
+	    driver.findElement(By.xpath("//input[@value='235']")).sendKeys("235");
+	    driver.findElement(By.xpath("//input[@value='']")).click();
+	    driver.findElement(By.xpath("//input[@value='3333']")).clear();
+	    driver.findElement(By.xpath("//input[@value='3333']")).sendKeys("3333");
+	    driver.findElement(By.xpath("//input[@value='']")).click();
+	    driver.findElement(By.xpath("//input[@value='4444']")).clear();
+	    driver.findElement(By.xpath("//input[@value='4444']")).sendKeys("4444");
+	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
+	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
+	  }
 
   
   @Test
@@ -172,7 +188,7 @@ public class basictest {
   }
   
   @Test
-  //Test for ExerciseTracker
+  //Test for ExerciseTracker T
   public void testEtracker() throws Exception {
 	  driver.get("http://localhost:5000/forum/admin/ui.html");
 	    driver.findElement(By.id("addUserButton")).click();
