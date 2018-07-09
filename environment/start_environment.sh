@@ -1,5 +1,5 @@
 ##This should ideally set up the whole thing. 
-#If nothing else it contains the commands to do so
+#Remember to change setup_browsermob and setup_etracker so they use proper paths
 
 #Jenkins is at port 8585
 
@@ -12,8 +12,7 @@ done
 
 
 
-#open mutillidae so you can restart the database
-#firefox http://localhost:81/mutillidae &
+
 
  
 

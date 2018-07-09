@@ -24,6 +24,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -159,24 +160,61 @@ public class basictest {
 	  assertTrue("Directory http://localhost/mutillidae/" + fuzzdata+ "does not exist",elementval.equals("Index of /mutillidae/"+fuzzdata));
 	  
   }
- 
-  public void testPetstorePostUpdate() throws Exception {
+
+  
+  
+  
+  @Test
+  public void testPetstorePostUpdateRandomInput() throws Exception {
 	    driver.get("http://localhost:8080/");
 	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div/div")).click();
 	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div/div/div[2]/button")).click();
 	    driver.findElement(By.xpath("//input[@value='']")).click();
 	    driver.findElement(By.xpath("//input[@value='235']")).clear();
-	    driver.findElement(By.xpath("//input[@value='235']")).sendKeys("235");
+	    driver.findElement(By.xpath("//input[@value='235']")).sendKeys(fuzzWithRadamsa("22"));
 	    driver.findElement(By.xpath("//input[@value='']")).click();
 	    driver.findElement(By.xpath("//input[@value='3333']")).clear();
-	    driver.findElement(By.xpath("//input[@value='3333']")).sendKeys("3333");
+	    driver.findElement(By.xpath("//input[@value='3333']")).sendKeys(fuzzWithRadamsa("33"));
 	    driver.findElement(By.xpath("//input[@value='']")).click();
 	    driver.findElement(By.xpath("//input[@value='4444']")).clear();
-	    driver.findElement(By.xpath("//input[@value='4444']")).sendKeys("4444");
+	    driver.findElement(By.xpath("//input[@value='4444']")).sendKeys(fuzzWithRadamsa("444"));
 	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
 	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
 	  }
 
+  @Test
+  public void testPetGetRandomInput() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[2]/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//input[@value='']")).click();
+    driver.findElement(By.xpath("//input[@value='1234']")).clear();
+    driver.findElement(By.xpath("//input[@value='1234']")).sendKeys(fuzzWithRadamsa("1"));
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[3]/button")).click();
+  }
+  
+  
+  @Test
+  public void testPetPostRandomInput() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div/section/div/hgroup/h2")).click();
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).clear();
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).sendKeys("{\n  \"id\": "+fuzzWithRadamsa("20") +",\n  \"category\": {\n    \"id\":"+fuzzWithRadamsa("20") +",\n    \"name\": \"string\"\n  },\n  \"name\": \" " +fuzzWithRadamsa("petname")+"\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}");
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div[2]/button")).click();
+  }
+  
+  
   
   @Test
   //if you want to loop some tests multiple times. There is probably a better way to do this
