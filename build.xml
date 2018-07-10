@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. --><project basedir="." default="build" name="SeleniumTesting">
+    <property environment="env"/>
+    <property name="junit.output.dir" value="junit"/>
+    <property name="debuglevel" value="source,lines,vars"/>
+    <property name="target" value="1.8"/>
+    <property name="source" value="1.8"/>
+    <path id="SeleniumTesting.classpath">
+        <pathelement location="bin"/>
+        <pathelement location="libs/tagsoup-1.2.1.jar"/>
+        <pathelement location="libs/rest-assured-3.1.0.jar"/>
+        <pathelement location="libs/okio-1.13.0.jar"/>
+        <pathelement location="libs/okhttp-3.9.1.jar"/>
+        <pathelement location="libs/junit-4.12.jar"/>
+        <pathelement location="libs/json-schema-validator-3.1.0-deps.zip"/>
+        <pathelement location="libs/json-schema-validator-3.1.0.jar"/>
+        <pathelement location="libs/jaxb-api-2.2.12.jar"/>
+        <pathelement location="libs/java-json.jar"/>
+        <pathelement location="libs/jackson-databind-2.9.5.jar"/>
+        <pathelement location="libs/httpmime-4.5.1.jar"/>
+        <pathelement location="libs/httpcore-4.4.6.jar"/>
+        <pathelement location="libs/httpclient-4.5.3.jar"/>
+        <pathelement location="libs/hamcrest-library-1.3.jar"/>
+        <pathelement location="libs/hamcrest-core-1.3.jar"/>
+        <pathelement location="libs/hamcrest-all-1.3.jar"/>
+        <pathelement location="libs/guava-23.6-jre.jar"/>
+        <pathelement location="libs/gson-2.8.2.jar"/>
+        <pathelement location="libs/groovy-xml-2.4.12.jar"/>
+        <pathelement location="libs/groovy-json-2.4.12.jar"/>
+        <pathelement location="libs/groovy-2.4.12.jar"/>
+        <pathelement location="libs/commons-logging-1.2.jar"/>
+        <pathelement location="libs/commons-lang3-3.4.jar"/>
+        <pathelement location="libs/commons-exec-1.3.jar"/>
+        <pathelement location="libs/commons-codec-1.10.jar"/>
+        <pathelement location="libs/commons-codec-1.9.jar"/>
+        <pathelement location="libs/client-combined-3.11.0-sources.jar"/>
+        <pathelement location="libs/client-combined-3.11.0.jar"/>
+        <pathelement location="libs/byte-buddy-1.7.9.jar"/>
+    </path>
+    <target name="init">
+        <mkdir dir="bin"/>
+        <copy includeemptydirs="false" todir="bin">
+            <fileset dir="src">
+                <exclude name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="clean">
+        <delete dir="bin"/>
+    </target>
+    <target depends="clean" name="cleanall"/>
+    <target depends="build-subprojects,build-project" name="build"/>
+    <target name="build-subprojects"/>
+    <target depends="init" name="build-project">
+        <echo message="${ant.project.name}: ${ant.file}"/>
+        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+            <src path="src"/>
+            <classpath refid="SeleniumTesting.classpath"/>
+        </javac>
+    </target>
+    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+    <target description="copy Eclipse compiler jars to ant lib directory" name="init-eclipse-compiler">
+        <copy todir="${ant.library.dir}">
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </copy>
+        <unzip dest="${ant.library.dir}">
+            <patternset includes="jdtCompilerAdapter.jar"/>
+            <fileset dir="${ECLIPSE_HOME}/plugins" includes="org.eclipse.jdt.core_*.jar"/>
+        </unzip>
+    </target>
+    <target description="compile project with Eclipse compiler" name="build-eclipse-compiler">
+        <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
+        <antcall target="build"/>
+    </target>
+    <target name="RESTtest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="RESTtest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="SeleniumTesting.classpath"/>
+        </junit>
+    </target>
+    <target name="basictest">
+        <mkdir dir="${junit.output.dir}"/>
+        <junit fork="yes" printsummary="withOutAndErr">
+            <formatter type="xml"/>
+            <test name="basictest" todir="${junit.output.dir}"/>
+            <jvmarg line="-ea"/>
+            <classpath refid="SeleniumTesting.classpath"/>
+        </junit>
+    </target>
+    <target name="junitreport">
+        <junitreport todir="${junit.output.dir}">
+            <fileset dir="${junit.output.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${junit.output.dir}"/>
+        </junitreport>
+    </target>
+</project>
