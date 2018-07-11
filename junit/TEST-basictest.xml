@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="6" failures="0" hostname="OUSPG-Ville" name="basictest" skipped="0" tests="7" time="22.487" timestamp="2018-07-10T09:48:37">
+<testsuite errors="0" failures="2" hostname="OUSPG-Ville" name="basictest" skipped="0" tests="4" time="21.635" timestamp="2018-07-11T07:35:33">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
-    <property name="env.SESSION_MANAGER" value="local/OUSPG-Ville:@/tmp/.ICE-unix/2252,unix/OUSPG-Ville:/tmp/.ICE-unix/2252" />
+    <property name="env.SESSION_MANAGER" value="local/OUSPG-Ville:@/tmp/.ICE-unix/2466,unix/OUSPG-Ville:/tmp/.ICE-unix/2466" />
     <property name="env.IM_CONFIG_PHASE" value="2" />
     <property name="env.LESSOPEN" value="| /usr/bin/lesspipe %s" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -39,12 +39,12 @@
     <property name="env.TEXTDOMAIN" value="im-config" />
     <property name="ant.project.default-target" value="build" />
     <property name="ant.project.name" value="SeleniumTesting" />
-    <property name="env.GNOME_TERMINAL_SERVICE" value=":1.74" />
+    <property name="env.GNOME_TERMINAL_SERVICE" value=":1.67" />
     <property name="java.version" value="1.8.0_171" />
     <property name="user.timezone" value="" />
-    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:path=/run/user/1000/bus,guid=744a2c2a216e47852a84fdd95b44531f" />
+    <property name="env.DBUS_SESSION_BUS_ADDRESS" value="unix:path=/run/user/1000/bus,guid=ef84cfcf259a844d4b225dc65b45ac1d" />
     <property name="sun.arch.data.model" value="64" />
-    <property name="env.SSH_AGENT_PID" value="2345" />
+    <property name="env.SSH_AGENT_PID" value="2559" />
     <property name="java.endorsed.dirs" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/endorsed" />
     <property name="sun.cpu.isalist" value="" />
     <property name="env.LC_PAPER" value="fi_FI.UTF-8" />
@@ -56,7 +56,7 @@
     <property name="env.GNOME_DESKTOP_SESSION_ID" value="this-is-deprecated" />
     <property name="java.class.version" value="52.0" />
     <property name="env.GDMSESSION" value="ubuntu" />
-    <property name="env.GNOME_TERMINAL_SCREEN" value="/org/gnome/Terminal/screen/38c534b9_3728_4e72_92fb_e624f57cc577" />
+    <property name="env.GNOME_TERMINAL_SCREEN" value="/org/gnome/Terminal/screen/dae29c16_13b1_4399_b067_a84b38914f7f" />
     <property name="user.country" value="US" />
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre" />
     <property name="ant.file.SeleniumTesting" value="/home/ville/eclipse-workspace/SeleniumTesting/build.xml" />
@@ -66,7 +66,7 @@
     <property name="os.version" value="4.15.0-24-generic" />
     <property name="path.separator" value=":" />
     <property name="java.vm.version" value="25.171-b11" />
-    <property name="env.MANAGERPID" value="2222" />
+    <property name="env.MANAGERPID" value="2437" />
     <property name="env.TEXTDOMAINDIR" value="/usr/share/locale/" />
     <property name="ant.library.dir" value="/usr/share/ant/lib" />
     <property name="junit.output.dir" value="junit" />
@@ -81,7 +81,7 @@
     <property name="env.LC_MEASUREMENT" value="fi_FI.UTF-8" />
     <property name="target" value="1.8" />
     <property name="user.home" value="/home/ville" />
-    <property name="env.OLDPWD" value="/home/ville/eclipse-workspace/SeleniumTesting/bin" />
+    <property name="env.OLDPWD" value="/home/ville/eclipse-workspace" />
     <property name="java.specification.vendor" value="Oracle Corporation" />
     <property name="env.VTE_VERSION" value="5202" />
     <property name="java.vendor.url" value="http://java.oracle.com/" />
@@ -91,9 +91,9 @@
     <property name="java.runtime.name" value="OpenJDK Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.10.3 compiled on March 29 2018" />
     <property name="java.class.path" value="/home/ville/eclipse-workspace/SeleniumTesting/bin:/home/ville/eclipse-workspace/SeleniumTesting/libs/tagsoup-1.2.1.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/rest-assured-3.1.0.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/okio-1.13.0.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/okhttp-3.9.1.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/junit-4.12.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/json-schema-validator-3.1.0-deps.zip:/home/ville/eclipse-workspace/SeleniumTesting/libs/json-schema-validator-3.1.0.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/jaxb-api-2.2.12.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/java-json.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/jackson-databind-2.9.5.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/httpmime-4.5.1.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/httpcore-4.4.6.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/httpclient-4.5.3.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/hamcrest-library-1.3.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/hamcrest-core-1.3.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/hamcrest-all-1.3.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/guava-23.6-jre.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/gson-2.8.2.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/groovy-xml-2.4.12.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/groovy-json-2.4.12.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/groovy-2.4.12.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/commons-logging-1.2.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/commons-lang3-3.4.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/commons-exec-1.3.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/commons-codec-1.10.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/commons-codec-1.9.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/client-combined-3.11.0-sources.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/client-combined-3.11.0.jar:/home/ville/eclipse-workspace/SeleniumTesting/libs/byte-buddy-1.7.9.jar:/usr/share/java/ant-launcher-1.10.3.jar:/usr/share/ant/lib/ant.jar:/usr/share/ant/lib/ant-junit.jar:/usr/share/ant/lib/ant-junit4.jar" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner basictest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/ville/eclipse-workspace/SeleniumTesting/junit/TEST-basictest.xml crashfile=/home/ville/eclipse-workspace/SeleniumTesting/junitvmwatcher4876591696670317714.properties propsfile=/home/ville/eclipse-workspace/SeleniumTesting/junit247227711338785738.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner basictest skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,/home/ville/eclipse-workspace/SeleniumTesting/junit/TEST-basictest.xml crashfile=/home/ville/eclipse-workspace/SeleniumTesting/junitvmwatcher8406884030374189478.properties propsfile=/home/ville/eclipse-workspace/SeleniumTesting/junit2990351966981876942.properties" />
     <property name="env.XDG_SESSION_ID" value="3" />
-    <property name="env.INVOCATION_ID" value="1776a7f0a3954e09b9369dd17b7c495b" />
+    <property name="env.INVOCATION_ID" value="6408bba3ac5b4faca538a84d2e35672d" />
     <property name="env.QT_ACCESSIBILITY" value="1" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="ant.file.type" value="file" />
@@ -103,13 +103,13 @@
     <property name="sun.cpu.endian" value="little" />
     <property name="env.HOME" value="/home/ville" />
     <property name="debuglevel" value="source,lines,vars" />
-    <property name="env.JOURNAL_STREAM" value="9:34921" />
+    <property name="env.JOURNAL_STREAM" value="9:35386" />
     <property name="java.io.tmpdir" value="/tmp" />
     <property name="env.LS_COLORS" value="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:" />
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/" />
     <property name="env.SSH_AUTH_SOCK" value="/run/user/1000/keyring/ssh" />
     <property name="env.CLUTTER_IM_MODULE" value="xim" />
-    <property name="env.DBUS_STARTER_ADDRESS" value="unix:path=/run/user/1000/bus,guid=744a2c2a216e47852a84fdd95b44531f" />
+    <property name="env.DBUS_STARTER_ADDRESS" value="unix:path=/run/user/1000/bus,guid=ef84cfcf259a844d4b225dc65b45ac1d" />
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment" />
     <property name="os.arch" value="amd64" />
     <property name="env.XDG_RUNTIME_DIR" value="/run/user/1000" />
@@ -136,128 +136,68 @@
     <property name="env.LC_NAME" value="fi_FI.UTF-8" />
     <property name="env.LESSCLOSE" value="/usr/bin/lesspipe %s %s" />
   </properties>
-  <testcase classname="basictest" name="testPetPostRandomInput" time="3.743">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13757, moz:profile: /tmp/rust_mozprofile.SBEYSF..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: 2e6e60e6-5aff-4b4c-bff8-bdddd6901c99" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13757, moz:profile: /tmp/rust_mozprofile.SBEYSF..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 2e6e60e6-5aff-4b4c-bff8-bdddd6901c99
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testPetPostRandomInput(basictest.java:202)
-</error>
+  <testcase classname="basictest" name="testPetPostRandomInput" time="10.149" />
+  <testcase classname="basictest" name="testLogIn" time="5.422">
+    <failure message="Error text is visible" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Error text is visible
+	at basictest.testLogIn(basictest.java:149)
+</failure>
   </testcase>
-  <testcase classname="basictest" name="testLogIn" time="3.115">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A81/mutillidae/index.php%3Fpage%3Duser-info.php&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13901, moz:profile: /tmp/rust_mozprofile.CC2KMW..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: 308d25bb-5c9d-485a-9518-96bc33133f56" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A81/mutillidae/index.php%3Fpage%3Duser-info.php&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 13901, moz:profile: /tmp/rust_mozprofile.CC2KMW..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 308d25bb-5c9d-485a-9518-96bc33133f56
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testLogIn(basictest.java:139)
-</error>
+  <testcase classname="basictest" name="testDirectoryBrowsing" time="3.126">
+    <failure message="Directory http://localhost/mutillidae/index&#xa;does not exist" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Directory http://localhost/mutillidae/index
+does not exist
+	at basictest.testDirectoryBrowsing(basictest.java:160)
+</failure>
   </testcase>
-  <testcase classname="basictest" name="testPetstorePostUpdateRandomInput" time="3.124">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14022, moz:profile: /tmp/rust_mozprofile.SYLnfN..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: 825cd323-0384-45b6-ba1d-b2560164170f" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14022, moz:profile: /tmp/rust_mozprofile.SYLnfN..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 825cd323-0384-45b6-ba1d-b2560164170f
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testPetstorePostUpdateRandomInput(basictest.java:169)
-</error>
-  </testcase>
-  <testcase classname="basictest" name="testDirectoryBrowsing" time="3.244">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A81/mutillidae/ind%25E0%25B9%2580e%25EF%25BF%25BD%25EF%25BF%25BDx%25EF%25BF%25BD%25EF%25BF%25BD&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14165, moz:profile: /tmp/rust_mozprofile.FQ8m3b..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: 72355d3c-6b00-4993-8b72-c1a4b40ec0b6" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A81/mutillidae/ind%25E0%25B9%2580e%25EF%25BF%25BD%25EF%25BF%25BDx%25EF%25BF%25BD%25EF%25BF%25BD&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14165, moz:profile: /tmp/rust_mozprofile.FQ8m3b..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 72355d3c-6b00-4993-8b72-c1a4b40ec0b6
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testDirectoryBrowsing(basictest.java:156)
-</error>
-  </testcase>
-  <testcase classname="basictest" name="testEtracker" time="2.929">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A5000/forum/admin/ui.html&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14311, moz:profile: /tmp/rust_mozprofile.YxSI2j..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: bcb2d1e7-ea58-49f7-a0e2-6545119c26e4" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A5000/forum/admin/ui.html&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14311, moz:profile: /tmp/rust_mozprofile.YxSI2j..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: bcb2d1e7-ea58-49f7-a0e2-6545119c26e4
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testEtracker(basictest.java:231)
-</error>
-  </testcase>
-  <testcase classname="basictest" name="testPetGetRandomInput" time="3.119">
-    <error message="Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.&#xa;Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;&#xa;System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;&#xa;Driver info: org.openqa.selenium.firefox.FirefoxDriver&#xa;Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14433, moz:profile: /tmp/rust_mozprofile.xzDGpI..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}&#xa;Session ID: 1d7bd6b5-39b1-4170-8140-a70ad90cb5df" type="org.openqa.selenium.WebDriverException">org.openqa.selenium.WebDriverException: Reached error page: about:neterror?e=proxyConnectFailure&amp;u=http%3A//localhost%3A8080/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20is%20configured%20to%20use%20a%20proxy%20server%20that%20is%20refusing%20connections.
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:33:08.638Z&apos;
-System info: host: &apos;OUSPG-Ville&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.15.0-24-generic&apos;, java.version: &apos;1.8.0_171&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 60.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:headless: false, moz:processID: 14433, moz:profile: /tmp/rust_mozprofile.xzDGpI..., moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.15.0-24-generic, rotatable: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 1d7bd6b5-39b1-4170-8140-a70ad90cb5df
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
-	at basictest.testPetGetRandomInput(basictest.java:187)
-</error>
-  </testcase>
-  <testcase classname="basictest" name="testLooping" time="3.159" />
-  <system-out><![CDATA[Radamsa fuzzed index into indเe��x��
+  <testcase classname="basictest" name="testLooping" time="2.891" />
+  <system-out><![CDATA[Radamsa fuzzed 20 into 655373
+
+Radamsa fuzzed 20 into -63602534012
+
+Radamsa fuzzed petname into p�tname
+
+Radamsa fuzzed fuzzthisstring.com into 
+Radamsa fuzzed fuzzthisstring.com into fuzz�thHEiiiisst
+cr
+
+Radamsa fuzzed index into index
 
 ]]></system-out>
-  <system-err><![CDATA[Jul 10, 2018 12:48:37 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+  <system-err><![CDATA[Jul 11, 2018 10:35:33 AM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216118268	geckodriver	INFO	geckodriver 0.21.0
-1531216118274	geckodriver	INFO	Listening on 127.0.0.1:4521
-1531216118503	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SBEYSFzpt9Lp"
-1531216120632	Marionette	INFO	Listening on port 38139
-1531216120712	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1531294533330	geckodriver	INFO	geckodriver 0.21.0
+1531294533344	geckodriver	INFO	Listening on 127.0.0.1:10856
+1531294533572	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.U6JURd8NDi23"
+1531294535641	Marionette	INFO	Listening on port 37827
+1531294535692	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jul 11, 2018 10:35:35 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1531216121076	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+Jul 11, 2018 10:35:43 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1531294543225	geckodriver	INFO	geckodriver 0.21.0
+1531294543232	geckodriver	INFO	Listening on 127.0.0.1:28918
+1531294543241	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.61krVrc9Tpv7"
+1531294545230	Marionette	INFO	Listening on port 40065
+1531294545254	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jul 11, 2018 10:35:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+JavaScript warning: http://localhost:81/mutillidae/javascript/ddsmoothmenu/jquery.min.js, line 19: unreachable code after return statement
+JavaScript error: http://localhost:81/mutillidae/index.php?page=user-info.php, line 1: ReferenceError: onLoadOfBody is not defined
+
+(/usr/lib/firefox/firefox:15616): dconf-WARNING **: 10:35:47.142: Unable to open /var/lib/snapd/desktop/dconf/profile/user: Permission denied
+JavaScript warning: http://localhost:81/mutillidae/javascript/ddsmoothmenu/jquery.min.js, line 19: unreachable code after return statement
+JavaScript error: http://localhost:81/mutillidae/index.php?page=user-info.php&username=&password=fuzz%EF%BF%BDthHEiiiisstcr&user-info-php-submit-button=View+Account+Details, line 1: ReferenceError: onLoadOfBody is not defined
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
+Jul 11, 2018 10:35:48 AM org.openqa.selenium.remote.DesiredCapabilities firefox
+INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
+1531294548658	geckodriver	INFO	geckodriver 0.21.0
+1531294548664	geckodriver	INFO	Listening on 127.0.0.1:3618
+1531294548672	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.ilt3RpvdlcpQ"
+1531294550711	Marionette	INFO	Listening on port 33179
+1531294550790	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jul 11, 2018 10:35:50 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+1531294551144	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
 onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
 _middleware/</<()@resource://activity-stream/lib/Store.jsm:49
 Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
@@ -274,154 +214,16 @@ onPacket/<()@server.js:242
 onPacket()@server.js:241
 _onJSONObjectReady/<()@transport.js:500
 *** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-Jul 10, 2018 12:48:41 PM org.openqa.selenium.remote.DesiredCapabilities firefox
+Jul 11, 2018 10:35:51 AM org.openqa.selenium.remote.DesiredCapabilities firefox
 INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216121737	geckodriver	INFO	geckodriver 0.21.0
-1531216121745	geckodriver	INFO	Listening on 127.0.0.1:4092
-1531216121756	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.CC2KMWe47js7"
-1531216123863	Marionette	INFO	Listening on port 38219
-1531216123972	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:44 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+1531294551774	geckodriver	INFO	geckodriver 0.21.0
+1531294551781	geckodriver	INFO	Listening on 127.0.0.1:30155
+1531294551788	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.3rQywBS9v6zc"
+1531294553857	Marionette	INFO	Listening on port 41989
+1531294553906	Marionette	WARN	TLS certificate errors will be ignored for this session
+Jul 11, 2018 10:35:53 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1531216124227	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
-onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
-_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
-Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
-uninit()@resource://activity-stream/lib/Store.jsm:151
-uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
-uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
-shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
-callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
-observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
-GeckoDriver.prototype.quit()@driver.js:3300
-despatch()@server.js:293
-execute()@server.js:267
-onPacket/<()@server.js:242
-onPacket()@server.js:241
-_onJSONObjectReady/<()@transport.js:500
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-Jul 10, 2018 12:48:44 PM org.openqa.selenium.remote.DesiredCapabilities firefox
-INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216124850	geckodriver	INFO	geckodriver 0.21.0
-1531216124857	geckodriver	INFO	Listening on 127.0.0.1:26217
-1531216124866	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.SYLnfNlk8jcr"
-1531216126967	Marionette	INFO	Listening on port 45363
-1531216126979	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:47 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-1531216127315	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
-onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
-_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
-Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
-uninit()@resource://activity-stream/lib/Store.jsm:151
-uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
-uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
-shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
-callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
-observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
-GeckoDriver.prototype.quit()@driver.js:3300
-despatch()@server.js:293
-execute()@server.js:267
-onPacket/<()@server.js:242
-onPacket()@server.js:241
-_onJSONObjectReady/<()@transport.js:500
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
-JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_next
-Jul 10, 2018 12:48:47 PM org.openqa.selenium.remote.DesiredCapabilities firefox
-INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216127985	geckodriver	INFO	geckodriver 0.21.0
-1531216127991	geckodriver	INFO	Listening on 127.0.0.1:25190
-1531216127999	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.FQ8m3bOvxf4r"
-1531216130151	Marionette	INFO	Listening on port 32979
-1531216130219	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:50 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-1531216130582	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
-onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
-_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
-Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
-uninit()@resource://activity-stream/lib/Store.jsm:151
-uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
-uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
-shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
-callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
-observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
-GeckoDriver.prototype.quit()@driver.js:3300
-despatch()@server.js:293
-execute()@server.js:267
-onPacket/<()@server.js:242
-onPacket()@server.js:241
-_onJSONObjectReady/<()@transport.js:500
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-Jul 10, 2018 12:48:51 PM org.openqa.selenium.remote.DesiredCapabilities firefox
-INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216131221	geckodriver	INFO	geckodriver 0.21.0
-1531216131226	geckodriver	INFO	Listening on 127.0.0.1:2927
-1531216131237	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.YxSI2jK4E14m"
-1531216133328	Marionette	INFO	Listening on port 37557
-1531216133346	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:53 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-1531216133631	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
-onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
-_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
-Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
-uninit()@resource://activity-stream/lib/Store.jsm:151
-uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
-uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
-shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
-callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
-observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
-GeckoDriver.prototype.quit()@driver.js:3300
-despatch()@server.js:293
-execute()@server.js:267
-onPacket/<()@server.js:242
-onPacket()@server.js:241
-_onJSONObjectReady/<()@transport.js:500
-JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
-JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
-JavaScript error: resource://gre/modules/JSONFile.jsm, line 159: Error: Data is not ready.
-JavaScript error: resource://pdf.js/PdfJs.jsm, line 247: NS_ERROR_XPC_JAVASCRIPT_ERROR_WITH_DETAILS: [JavaScript Error: "Data is not ready." {file: "resource://gre/modules/JSONFile.jsm" line: 159}]'[JavaScript Error: "Data is not ready." {file: "resource://gre/modules/JSONFile.jsm" line: 159}]' when calling method: [nsIHandlerService::store]
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-JavaScript error: resource://gre/modules/osfile/osfile_async_front.jsm, line 408: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_close
-JavaScript error: resource://gre/modules/ProfileAge.jsm, line 174: Error: Unable to fetch oldest profile entry: Error: OS.File has been shut down. Rejecting post to DirectoryIterator_prototype_next
-Jul 10, 2018 12:48:54 PM org.openqa.selenium.remote.DesiredCapabilities firefox
-INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216134151	geckodriver	INFO	geckodriver 0.21.0
-1531216134156	geckodriver	INFO	Listening on 127.0.0.1:17810
-1531216134164	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xzDGpIx9YVP9"
-1531216136309	Marionette	INFO	Listening on port 41093
-1531216136373	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:56 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-1531216136640	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
-onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
-_middleware/</<()@resource://activity-stream/lib/Store.jsm:49
-Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
-uninit()@resource://activity-stream/lib/Store.jsm:151
-uninit()@resource://activity-stream/lib/ActivityStream.jsm:300
-uninit()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:73
-shutdown()@resource://gre/modules/addons/XPIProvider.jsm -> jar:file:///usr/lib/firefox/browser/features/activity-stream@mozilla.org.xpi!/bootstrap.js:169
-callBootstrapMethod()@resource://gre/modules/addons/XPIProvider.jsm:4436
-observe()@resource://gre/modules/addons/XPIProvider.jsm:2287
-GeckoDriver.prototype.quit()@driver.js:3300
-despatch()@server.js:293
-execute()@server.js:267
-onPacket/<()@server.js:242
-onPacket()@server.js:241
-_onJSONObjectReady/<()@transport.js:500
-*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: telemetry_modules_ping
-Jul 10, 2018 12:48:57 PM org.openqa.selenium.remote.DesiredCapabilities firefox
-INFO: Using `new FirefoxOptions()` is preferred to `DesiredCapabilities.firefox()`
-1531216137273	geckodriver	INFO	geckodriver 0.21.0
-1531216137284	geckodriver	INFO	Listening on 127.0.0.1:30768
-1531216137292	mozrunner::runner	INFO	Running command: "/usr/lib/firefox/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.xVIcGdyEbmJz"
-1531216139400	Marionette	INFO	Listening on port 40923
-1531216139526	Marionette	WARN	TLS certificate errors will be ignored for this session
-Jul 10, 2018 12:48:59 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-1531216139681	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
+1531294554020	addons.xpi	WARN	Exception running bootstrap method shutdown on activity-stream@mozilla.org: [Exception... "Component returned failure code: 0x80004005 (NS_ERROR_FAILURE) [nsIObserverService.removeObserver]"  nsresult: "0x80004005 (NS_ERROR_FAILURE)"  location: "JS frame :: resource://activity-stream/lib/SnippetsFeed.jsm :: uninit :: line 185"  data: no] Stack trace: uninit()@resource://activity-stream/lib/SnippetsFeed.jsm:185
 onAction()@resource://activity-stream/lib/SnippetsFeed.jsm:201
 _middleware/</<()@resource://activity-stream/lib/Store.jsm:49
 Store/this[method]()@resource://activity-stream/lib/Store.jsm:28
