@@ -48,7 +48,7 @@ public class basictest {
   private String PROXY_URL = "http://localhost:8080/proxy/8081/har";
   private String REST_URL = "http://localhost:81/mutillidae/webservices/rest/ws-user-account.php?username=";
   private String REST_URL2 = "http://localhost:5000/exercisetracker/api/";
-  private int LOOPS = 4;
+  private int LOOPS = 10;
   private String FUZZ_STRING = "fuzzthisstring.com";
   
   private Boolean proxyInUse = true;
@@ -139,64 +139,38 @@ public class basictest {
 	  driver.get(TEST_ENVIRONMENT+"/index.php?page=user-info.php");
 	    driver.findElement(By.name("username")).click();
 	    driver.findElement(By.name("username")).clear();
-	    driver.findElement(By.name("username")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.name("username")).sendKeys("testuser1");
 	    driver.findElement(By.name("password")).click();
 	    driver.findElement(By.name("password")).clear();
-	    driver.findElement(By.name("password")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
+	    driver.findElement(By.name("password")).sendKeys("password123");
 	    driver.findElement(By.name("user-info-php-submit-button")).click();
 	    Boolean visible = driver.findElement(By.id("id-bad-cred-tr")).isDisplayed();
 	    //Fuzzing wise not the smartest assert. Basically this looks if account exists.
 	    assertTrue("Error text is visible",visible.equals(false));
   }
-  
+  @Test
+  public void testMutillidaeRepeater() throws Exception {
+    driver.get("http://localhost:81/mutillidae/index.php?page=repeater.php");
+    driver.findElement(By.name("string_to_repeat")).click();
+    driver.findElement(By.name("string_to_repeat")).clear();
+    driver.findElement(By.name("string_to_repeat")).sendKeys("looptiloop");
+    driver.findElement(By.name("times_to_repeat_string")).click();
+    driver.findElement(By.name("times_to_repeat_string")).clear();
+    driver.findElement(By.name("times_to_repeat_string")).sendKeys("20");
+    driver.findElement(By.name("repeater-php-submit-button")).click();
+  }
   @Test
   //fuzz url to find hidden directories
   public void testDirectoryBrowsing() throws Exception{
-	  String fuzzdata = fuzzWithRadamsa("index");
-	  driver.get(TEST_ENVIRONMENT+'/'+ fuzzdata);
+	  
+	  driver.get(TEST_ENVIRONMENT+'/'+ "incorrectlocation");
 	  WebElement header1 = driver.findElement(By.tagName("h1"));
 	  String elementval = header1.getText();
 	  //check if the element h1 has the string that indicates that you can browse directories
-	  assertTrue("Directory http://localhost/mutillidae/" + fuzzdata+ "does not exist",elementval.equals("Index of /mutillidae/"+fuzzdata));
+	 // assertTrue("Directory http://localhost/mutillidae/" + fuzzdata+ "does not exist",elementval.equals("Index of /mutillidae/"+fuzzdata));
 	  
   }
 
-  
-  
-  /*
-  @Test
-  public void testPetstorePostUpdateRandomInput() throws Exception {
-	    driver.get("http://localhost:8080/");
-	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div/div")).click();
-	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div/div/div[2]/button")).click();
-	    driver.findElement(By.xpath("//input[@value='']")).click();
-	    driver.findElement(By.xpath("//input[@value='235']")).clear();
-	    driver.findElement(By.xpath("//input[@value='235']")).sendKeys(fuzzWithRadamsa("22"));
-	    driver.findElement(By.xpath("//input[@value='']")).click();
-	    driver.findElement(By.xpath("//input[@value='3333']")).clear();
-	    driver.findElement(By.xpath("//input[@value='3333']")).sendKeys(fuzzWithRadamsa("33"));
-	    driver.findElement(By.xpath("//input[@value='']")).click();
-	    driver.findElement(By.xpath("//input[@value='4444']")).clear();
-	    driver.findElement(By.xpath("//input[@value='4444']")).sendKeys(fuzzWithRadamsa("444"));
-	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
-	    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
-	  }
-
-  @Test
-  public void testPetGetRandomInput() throws Exception {
-    driver.get("http://localhost:8080/");
-    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
-    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
-    driver.findElement(By.xpath("//option[@value='http']")).click();
-    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div/div")).click();
-    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[2]/div/div[2]/button")).click();
-    driver.findElement(By.xpath("//input[@value='']")).click();
-    driver.findElement(By.xpath("//input[@value='1234']")).clear();
-    driver.findElement(By.xpath("//input[@value='1234']")).sendKeys(fuzzWithRadamsa("1"));
-    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[3]/button")).click();
-  }
-  */
-  
   @Test
   public void testPetPostRandomInput() throws Exception {
     driver.get("http://localhost:8080/");
@@ -210,44 +184,79 @@ public class basictest {
     driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
     driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
     driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).clear();
-    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).sendKeys("{\n  \"id\": "+fuzzWithRadamsa("20") +",\n  \"category\": {\n    \"id\":"+fuzzWithRadamsa("20") +",\n    \"name\": \"string\"\n  },\n  \"name\": \" " +fuzzWithRadamsa("petname")+"\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 1,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}");
+    driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).sendKeys("{\n  \"id\": "+ "21" +",\n  \"category\": {\n    \"id\":"+"21" +",\n    \"name\": \"string\"\n  },\n  \"name\": \" " + "testirekku" +"\",\n  \"photoUrls\": [\n    \"string\"\n  ],\n  \"tags\": [\n    {\n      \"id\": 21,\n      \"name\": \"string\"\n    }\n  ],\n  \"status\": \"available\"\n}");
     driver.findElement(By.xpath("//div[@id='operations-pet-addPet']/div[2]/div/div[2]/button")).click();
   }
   
   
+  @Test
+  public void testPetstoreUpdate() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//input[@value='']")).click();
+    driver.findElement(By.xpath("//input[@value='']")).clear();
+    driver.findElement(By.xpath("//input[@value='']")).sendKeys("21");
+    driver.findElement(By.xpath("//input[@value='']")).click();
+    driver.findElement(By.xpath("//input[@value='']")).clear();
+    driver.findElement(By.xpath("//input[@value='']")).sendKeys("newtestpet");
+    driver.findElement(By.xpath("//input[@value='']")).click();
+    driver.findElement(By.xpath("//input[@value='']")).clear();
+    driver.findElement(By.xpath("//input[@value='']")).sendKeys("available");
+    driver.findElement(By.xpath("//div[@id='operations-pet-updatePetWithForm']/div[2]/div/div[2]/button")).click();
+  }
+
+  @Test
+  public void testPetstoreget() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[2]/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//input[@value='']")).click();
+    driver.findElement(By.xpath("//input[@value='']")).clear();
+    driver.findElement(By.xpath("//input[@value='']")).sendKeys("21");
+    driver.findElement(By.xpath("//div[@id='operations-pet-getPetById']/div[2]/div/div[3]/button")).click();
+  }
+  @Test
+  public void testPetstorestoreget() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-getInventory']/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-getInventory']/div[2]/div/div[2]/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-getInventory']/div[2]/div/div[3]/button")).click();
+  }
+  
   
   @Test
-  //if you want to loop some tests multiple times. There is probably a better way to do this
-  public void testLooping() throws Exception{
-	for(int i=1;i<LOOPS;i++) {
-	  //testDirectoryBrowsing();
-	  } 
-	  
+  public void testPetstorestorepost() throws Exception {
+    driver.get("http://localhost:8080/");
+    driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select")).click();
+    new Select(driver.findElement(By.xpath("//div[@id='swagger-ui']/section/div[2]/div[2]/div[2]/section/label/select"))).selectByVisibleText("http");
+    driver.findElement(By.xpath("//option[@value='http']")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div[2]/div/div/div/div[2]/button")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).click();
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).clear();
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div[2]/div/div/div[2]/table/tbody/tr/td[2]/div[2]/div/div/textarea")).sendKeys("{\n  \"id\": 21,\n  \"petId\": 21,\n  \"quantity\": 1,\n  \"shipDate\": \"2018-07-16T06:46:47.009Z\",\n  \"status\": \"placed\",\n  \"complete\": false\n}");
+    driver.findElement(By.xpath("//div[@id='operations-store-placeOrder']/div[2]/div/div[2]/button")).click();
   }
-  /* 
-  @Test
-  //Test for ExerciseTracker T
-  public void testEtracker() throws Exception {
-	  driver.get("http://localhost:5000/forum/admin/ui.html");
-	    driver.findElement(By.id("addUserButton")).click();
-	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).click();
-	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).clear();
-	    driver.findElement(By.xpath("(//input[@id='username'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
-	    driver.findElement(By.id("password")).clear();
-	    driver.findElement(By.id("password")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
-	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).click();
-	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).clear();
-	    driver.findElement(By.xpath("(//input[@id='description'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
-	    driver.findElement(By.xpath("(//input[@id='avatar'])[2]")).clear();
-	    driver.findElement(By.xpath("(//input[@id='avatar'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
-	    driver.findElement(By.xpath("(//input[@id='visibility'])[2]")).clear();
-	    driver.findElement(By.xpath("(//input[@id='visibility'])[2]")).sendKeys(fuzzWithRadamsa(FUZZ_STRING));
-	    driver.findElement(By.id("createUser")).click();
-	    assertEquals("User successfully added", closeAlertAndGetItsText());;
-  }
- 
   
-  */
+  @Test
+  public void testMutillidaeXMLValidator() throws Exception {
+    driver.get("http://localhost:81/mutillidae/index.php?page=xml-validator.php");
+    driver.findElement(By.id("idXMLTextArea")).click();
+    driver.findElement(By.id("idXMLTextArea")).clear();
+    driver.findElement(By.id("idXMLTextArea")).sendKeys("<somexml><message>Hello World</message></somexml>");
+    driver.findElement(By.name("xml-validator-php-submit-button")).click();
+  }
+  
 //all below is JUnit stuff generated by katalon recorder
   @After
   public void tearDown() throws Exception {
