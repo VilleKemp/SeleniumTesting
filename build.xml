@@ -86,7 +86,7 @@
             <classpath refid="SeleniumTesting.classpath"/>
         </junit>
     </target>
-    <target name="basictest">
+    <target name="basictest.testPetstorePost">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -95,7 +95,7 @@
             <classpath refid="SeleniumTesting.classpath"/>
         </junit>
     </target>
-    <target name="basictest.testPetstorePost">
+    <target name="basictest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
