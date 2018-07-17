@@ -1,4 +1,5 @@
 # SeleniumTesting
+
 Setup:  
 Get java and eclipse  
 export this project  
@@ -19,13 +20,6 @@ firefox http://localhost:80/mutillidae
 * remake the database  
 Start testing!  
   
-REST testing  
-Note this API is kinda barebones and missing features. It requires python2 and atleas packages flask and flask-restful
-```
-git clone https://github.com/VilleKemp/ExerciseTracker.git && cd ExerciseTracker && git checkout WIP
-python forum.py
-```
-Follow the README in branch WIP of the ExerciseTracker
 # Using browsermob
 Download and run browsermob-proxy binary  
 * https://github.com/lightbody/browsermob-proxy/releases  
@@ -44,4 +38,5 @@ Look at HAR file using browser with address http://localhost:8080/proxy/8081/har
 
 Set value proxyInUse in basictest.java to true
 
-
+### Note 
+Most of the tests are lacking asserts so they don't really test anything else than that the specific sequence they are executing is possible. This is mainly due to the fact that these selenium tests are mainly used to generate traffic to a Jenkins pipeline. Asserts might be added at the later date
